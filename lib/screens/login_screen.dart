@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'register_screen.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -70,22 +70,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text("iniciar sesion"),
-                ),
-              ),
-
-              const SizedBox(height:10),
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const RegisterScreen()
-                      ),
-                    );
-                  },
-                  child: const Text("Crear Cuenta")
                 ),
               ),
               

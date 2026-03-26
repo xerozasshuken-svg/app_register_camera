@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget{
-  final String? role;
-  const RegisterScreen({super.key, this.role});
+  const RegisterScreen({super.key});
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
@@ -21,7 +20,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   void initState() {
     super.initState();
-    selectedRole = widget.role ?? "Alumno";
+    selectedRole = "Alumno";
   }
 
   @override
@@ -58,8 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
 
             const SizedBox(height: 20),
-            widget.role == null
-            ? DropdownButtonFormField<String>(
+            DropdownButtonFormField<String>(
                 initialValue: selectedRole, 
                 decoration: const InputDecoration(
                   labelText: "Rol",
@@ -76,8 +74,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   selectedRole = value!;
                 });
               },
-            )
-            : Container(
+            ),
+            /*
+             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
@@ -91,7 +90,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
             ),
-
+            */
             const SizedBox(height: 15),
             TextField(
               decoration: InputDecoration(

@@ -68,10 +68,12 @@ class _AccessCodeScreenState extends State<AccessCodeScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     
+                    String code = codeController.text;
+                    
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const RegisterScreen(role: "Administrador"),  
+                        builder: (context) => const RegisterScreen(),  
                       ), 
                     );
                   },
